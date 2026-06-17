@@ -1,0 +1,28 @@
+#!/bin/bash
+# Configuration IP
+ip address add 10.0.1.1/24 dev eth0
+ip route add default via 10.0.1.5
+
+# Mettre à jour et installer Apache
+apt-get update
+apt-get install -y apache2
+
+# Créer une page web personnalisée
+cat > /var/www/html/index.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serveur Web 1</title>
+</head>
+<body>
+    <h1>🌐 Serveur Web 1</h1>
+    <p>Ceci est le serveur web N°1</p>
+    <p>Adresse IP: 10.0.1.1</p>
+</body>
+</html>
+EOF
+
+# Démarrer Apache
+service apache2 start
+
+echo "Serveur Web 1 configuré sur 10.0.1.1"

@@ -1,0 +1,5 @@
+#!/bin/bash
+ip address add 100.0.0.10/24 dev eth0
+ip route add default via 100.0.0.2
+echo "nameserver 100.0.0.2" > /etc/resolv.conf
+echo "Client1 configuré avec IP 100.0.0.10"

@@ -1,0 +1,39 @@
+#!/bin/bash
+# Configuration IP
+ip address add 10.0.0.2/24 dev eth0
+ip route add default via 10.0.0.5
+
+# Attendre que le réseau soit prêt
+sleep 5
+
+# Configuration de BIND9 pour serveur racine
+cat > /etc/bind/named.conf.options << 'EOF'
+options {
+    directory "/var/cache/bind";
+    listen-on { 10.0.0.2; };
+    listen-on-v6 { none; };
+    allow-query { any; };
+    recursion no;
+    dnssec-validation no;
+};
+EOF
+
+# Créer le fichier de zone racine
+cat > /etc/bind/db.root << 'EOF'
+; Fichier de zone racine
+.                       1D IN NS        A.ROOT-SERVERS.NET.
+A.ROOT-SERVERS.NET.     1D IN A         10.0.0.2
+EOF
+
+# Configurer la zone locale
+cat > /etc/bind/named.conf.local << 'EOF'
+zone "." {
+    type master;
+    file "/etc/bind/db.root";
+};
+EOF
+
+# Démarrer BIND9
+/etc/init.d/bind9 restart
+
+echo "Serveur DNS Root 2 configuré sur 10.0.0.2"
