@@ -86,20 +86,22 @@ Ce projet a été réalisé dans le cadre du **Projet de Fin de Module d'Adminis
 
 ```
 📂 Projet-LoadBalancing/
-├── 📄 lab.conf                 # Configuration du laboratoire Kathara
-├── 📄 client1.startup          # Script de démarrage client1
-├── 📄 client2.startup          # Script de démarrage client2
-├── 📄 pc1.startup              # Script de démarrage pc1
-├── 📄 dns_lb.startup           # Script de démarrage load balancer DNS
-├── 📄 dnsroot1.startup         # Script de démarrage serveur DNS 1
-├── 📄 dnsroot2.startup         # Script de démarrage serveur DNS 2
-├── 📄 ws_random.startup        # Script de démarrage load balancer Web
-├── 📄 server1.startup          # Script de démarrage serveur web 1
-├── 📄 server2.startup          # Script de démarrage serveur web 2
-├── 📄 monitor_web.sh           # Script de monitoring web (optionnel)
-├── 📄 monitor_dns.sh           # Script de monitoring DNS (optionnel)
-├── 📄 README.md                # Documentation du projet
-└── 📄 Rapport.pdf              # Rapport complet du projet
+├── 📄 lab.conf               # Configuration du laboratoire
+├── 📄 client1.startup
+├── 📄 client2.startup
+├── 📄 pc1.startup
+├── 📄 dns_lb.startup
+├── 📄 dnsroot1.startup
+├── 📄 dnsroot2.startup
+├── 📄 ws_random.startup
+├── 📄 server1.startup
+├── 📄 server2.startup
+├── 📂 Vidéo/                    # Ressources multimédia 
+│   ├── 📄 video.7z              # Archive compressée <100 Mo
+│   └── 📄 presentation.pptx      # PowerPoint de présentation          
+│
+└── 📂 .gitattributes             # Suivi Git LFS
+
 ```
 
 ---
