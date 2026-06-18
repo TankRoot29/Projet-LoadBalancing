@@ -271,7 +271,7 @@ iptables-legacy --table nat --append PREROUTING \
 
 **AGBENONZAN Kossivi Jacques Junior**  
 📧 junioragbenonzan31@gmail.com  
-🎓 Licence 3 - Réseaux Informatique Sécurité et Télécommunications  
+🎓 Licence 3 -Mathématiques et Informatique - Option RIST 
 🏛️ Université Félix Houphouët-Boigny
 
 ---
@@ -279,7 +279,7 @@ iptables-legacy --table nat --append PREROUTING \
 ## 📚 Encadrement
 
 **Dr Diallo**  
-Enseignant-chercheur - Département RIST
+Enseignant-chercheur - Département de Mathématiques et Informatique
 
 ---
 
@@ -300,7 +300,7 @@ Ce projet est réalisé dans un cadre académique. Toute reproduction ou utilisa
 Je remercie :
 - **Dr Diallo** pour son encadrement et ses conseils
 - L'**Université Félix Houphouët-Boigny** pour la formation
-- Tous les enseignants du département RIST
+- Tous les enseignants du département de Mathématiques et Informatique
 
 ---
 
